@@ -4,7 +4,7 @@ echo "A Quick SYstem Audit Script"
 10/3/2018
 echo ""
 echo "Machine Type Info:"
-echo$MACHTYPE
+echo $MACHTYPE
 echo -e "Uname info: $(uname -a) \n"
 echo -e "IP Info: $(IP addr | grep inet | tail -2 | head -1) \n"
 echo "Hostname: $(hostname -s) "
