@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-(Images/Vnetwork.png) 
+ 
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the .yml file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -61,6 +61,7 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+
 The main advantage is that you can input a command into several different servers using the same playbook.
 
 The playbook implements the following tasks:
@@ -89,14 +90,14 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the .yml file to the ansible directory.
-- Update the hosts file to include the webservers and elkservers file.
+- Update the hosts file to include the webservers and elkserver’s file.
 - Run the playbook, and navigate to Kibana website to check that the installation worked as expected.
 
 - Which file is the playbook? Where do you copy it? The playbooks are metricbeat-playbook.yml and filebeat-playbook.yml and they are copied to /etc/ansible
 - Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on? You will need to edit the hosts file to run on the specified machine to add the webserver and elkserver's IP address.
 - Which URL do you navigate to in order to check that the ELK server is running? http://ElkserverpublicIP:5601/app/kibana
 
-- Provide the specific commands the user will need to run to download the playbook, update the files, etc.
+_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
 ansible-playbook filebeat-playbook.yml
 ansible-playbook metricbeat-playbook.yml
